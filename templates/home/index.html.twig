@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Fils des articles
+{% endblock %}
+{% block body %}
+	{% for article in articles %}
+		<a href="{{ path('article_focus', {id: article.id}) }}" style="text-decoration: none; margin: 15px;">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="{{ asset('upload/') }}{{article.picture}}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">{{article.title}}</h5>
+				</div>
+			</div>
+		</a>
+	{% endfor %}
+{% endblock %}

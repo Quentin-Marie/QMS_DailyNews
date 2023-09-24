@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Article n° {{article.id}}
+{% endblock %}
+
+{% block body %}
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="{{ asset('upload/') }}{{article.picture}}" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">{{article.title}}</h5>
+		</div>
+	</div>
+
+{% endblock %}
