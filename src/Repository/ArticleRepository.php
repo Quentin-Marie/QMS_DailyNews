@@ -18,7 +18,7 @@ class ArticleRepository extends ServiceEntityRepository
 {
     public function ordre()
     {
-        return $this->findBy(array(), array('id' => 'desc'));
+        return $this->findBy(array(), array('publish_date' => 'desc'));
     }
     public function __construct(ManagerRegistry $registry)
     {
